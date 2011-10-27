@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h3>Payment</h3>
+<p>You are about to pay <span class="sum">{{payment.amount}}</span>&euro; for seller <span class="seller">{{payment.sid}}</span>.
+</p>
+
+<div>
+    <a class="button" href="/cancel/{{payment.id}}/">Cancel</a> | 
+    {%if dev %}<a class="button" href="{% url paymentapi.views.process_payment 'error' payment.id %}">Fail</a> |{% endif %}
+    <a class="button" href="{% url paymentapi.views.process_payment 'success' payment.id %}">Pay</a>
+</div>
+{% endblock %}

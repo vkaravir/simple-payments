@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Getting Your Secret Key</h2>
+<form action="." method="POST">
+  <p>The seller id can be any string, but it should be unique among groups so
+      make sure to select one only your group would think.</p>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Get Key"/>
+</form>
+{% endblock %}

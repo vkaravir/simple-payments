@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<p>With this form, you can test the payment service.</p>
+<form action="{% url paymentapi.views.pay %}" method="POST">
+  
+{{form.as_p}}
+<input name="dev" type="checkbox" id="id_dev"/><label for="id_dev">dev</label>
+<input type="submit" />
+</form>
+{% endblock %}
