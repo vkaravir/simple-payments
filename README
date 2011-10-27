@@ -1,0 +1,12 @@
+Simple Payments Service
+----------------------
+
+This Django project is intended as a dummy payment service for educational use. We used it in our web programming course as part of a ecommerce site project. It is similar to real online payment services, but intended merely to give students an idea how such a service can be used.
+
+Installation:
+-------------
+Should be as simple as:
+- cloning the git repository ()
+- running python manage.py syncdb
+- running python manage.py runserver
+Instructions on usage can then be found from http://localhost:8000/
