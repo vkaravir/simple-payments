@@ -3,7 +3,7 @@ from django import forms
 from models import Payment
 
 import re
-sid_format = re.compile("[a-zA-Z0-9]")
+sid_format = re.compile("^[a-zA-Z0-9]+$")
 
 class SecretKeyForm(forms.Form):
   """
